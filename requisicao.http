@@ -3,12 +3,12 @@ POST http://localhost:3000/orcamentos
 Content-Type: application/json
 
 {
-    "id": "2",
-    "nomeCliente":"Maria Fernanda",
+    "nome_cliente":"Maria",
     "descricao": "Pintura de um quarto",
-    "valor": 100, 
-    "prazo": "1 dia", 
-    "status": "Aprovado"
+    "valor": 200, 
+    "prazo": "20/03/2025", 
+    "status": "aprovado",
+    "data_criacao": "10/03/2025"
 }
 
 ### 
@@ -20,28 +20,34 @@ Content-Type: application/json
 ### 
 
 ### Rota para buscar orçamento específico pelo id
-GET http://localhost:3000/orcamentos/2
+GET http://localhost:3000/orcamentos/4
 Content-Type: application/json
 
 ###
 
 ### Rota para editar um orçamento
-PUT http://localhost:3000/orcamentos/2
+PUT http://localhost:3000/orcamentos/4
 Content-Type: application/json
 
 {
     "novoNomeCliente":"João Paulo Silva",
     "novaDescricao": "Pintura de um apartamento de 80m²",
     "novoValor": 400, 
-    "novoPrazo": "3 dias", 
-    "novoStatus": "Pendente"
+    "novoPrazo": "20/03/2025",
+    "novoStatus": "pendente",
+    "novaDataCriacao": "10/03/2025"
 }
 
 ### 
 
-### Rota para Deletar um orçamento
-DELETE http://localhost:3000/orcamentos/2
+### Rota para Deletar um orçamento pelo id
+DELETE http://localhost:3000/orcamentos/4
 Content-Type: application/json
 
 ###
 
+### Deletar todos os produtos
+DELETE http://localhost:3000/orcamentos
+Content-Type: application/json
+
+###
